@@ -19,7 +19,7 @@
 
     $id = rand(1,$row[0]);
 
-    $query = "SELECT msg FROM quote WHERE id = " . $id;
+    $query = "SELECT CONCAT(msg, "Regards, Sooraj Lohana") FROM quote WHERE id = " . $id;
     $result = $link->query($query);
     if (!$result) {
         http_response_code (500);
